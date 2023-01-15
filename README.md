@@ -23,14 +23,20 @@ Random Sample of images from each class:
 ![IMG](https://github.com/YashK07/Sol/blob/master/Readme%20Images/S3.png?raw=true)
 
 
-Image count of each classes in the Training Data:
 
-![IMG](https://github.com/YashK07/Sol/blob/master/Readme%20Images/count.png?raw=true)
+Image count of each classes in the Training Data & after train-validation split:
+
+![IMG](https://github.com/YashK07/Sol/blob/master/Readme%20Images/EDA1.png?raw=true)
+
+- The dataset has a decent balance of class images in the training data which is preserved even after a train-validation split (random_state = 42).
 
 
 ## Modelling
 
-You can download pretrained models here:
+Used the technique of transfer learning to devlope a Deep Learning model for the given task. 
+
+I have used two appraoches for devlopeing models and obtaining the most optimal based on the Cohen Kappa metric:
+![IMG](https://github.com/YashK07/Sol/blob/master/Readme%20Images/approach.png?raw=true)
 
 - [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
 
