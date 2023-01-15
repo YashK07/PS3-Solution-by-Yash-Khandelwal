@@ -36,11 +36,11 @@ Image count of each classes in the Training Data & after train-validation split:
 Used the technique of **Transfer Learning** to devlope a Deep Learning model for the given task. 
 
 I have used two appraoches for devlopeing models and obtaining the most optimal based on the Cohen Kappa metric:
-![IMG](https://github.com/YashK07/Sol/blob/master/Readme%20Images/approach.png?raw=true)
+![IMG](https://github.com/YashK07/PS3-Solution-by-Yash-Khandelwal/blob/master/Readme%20Images/approach.png?raw=true)
 
 In the approach 1, the head has a **Flatten layer** followed by a hidden layer with **512 neurons** & then a predicition layer with 5 neurons (5 classes).
 
-In the appraoch 2, I have used GlobalPooling instead of **Flatten** + **Fully Connected layers** in the head. Here are a few reasons:
+In the appraoch 2, I have used GlobalPooling instead of **Flatten** + **Hidden layers** in the head. Here are a few reasons:
 
 - **Global Pooling** condenses all of the feature maps into a single one, pooling all of the relevant information into a single map that can be easily understood by a single dense classification layer instead of multiple layers.
 - It's typically applied as average pooling (GlobalAveragePooling2D) or max pooling (GlobalMaxPooling2D) and can work for 1D and 3D input as well.
@@ -66,6 +66,7 @@ I went on with the following models due to their State-of-the-art performance in
 ### Approach 1
 I began with **ResNet50** to obtain a baseline model.
 - Augumentations used = rotation, horizontal flip, width shift, height shift 
+- Batch size = 64
 - Learning rate = 1e^-4
 - Optimizer = RMSProp
 - Loss = Categorical Cross Entropy
@@ -80,28 +81,35 @@ Results:
 
 ### Approach 2
 
+![IMG](https://github.com/YashK07/PS3-Solution-by-Yash-Khandelwal/blob/master/Readme%20Images/experimental%20results.png?raw=true)
 
+Training for 30 epochs.
+Metric Evaluation on Ship Dataset (following are the best results obtained in 30 epoch training)
+| Model	| Training Loss |	Training Kappa | Training Accuracy |	Validation Loss |	Validation Kappa |	Validation Accuracy
+| ------ | ------------ | --------------| ------------------ | ---------- | ---------------------- | ---------------------|
+| Xception |	0.0746 |	0.9608 |	0.9697	| 0.3965	| 0.8963 | 0.9200 |
+| VGG16 |	0.3257 |	0.8528 |	0.8867 |	0.3632 |	0.8375 |	0.8731 |	 
+| ResNet50 |	0.1016 |	0.9532 |	0.9639 |	0.6208	| 0.8704 |	0.8998 |	
 
+Obtained the highest **Kappa Score** on validation data with **Xception**. Moreover, all other metrics and loss values are most optimal in the case of Xception. Hence, I chose Xception as the **baseline**.
 
+After multiple experiments, with the following set of **hyperparamters** I obtained the final model:
+- Augumentations used = rotation, horizontal flip, width shift, height shift, zoom, vertical flip.
+- Batch size = 64
+- Learning rate = 3e^-4
+- Optimizer = Adam
+- Loss = Categorical Cross Entropy
+- Metric = Cohen Kappa, F1 Score, Categorical Accuracy
+- Epochs = 50
 
-
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
-
-## Experimental Results
+Results:
+| Model	| Training Loss |	Training Kappa | Training F1 |	Training Accuracy | Validation Loss |	Validation Kappa | Validation F1 |	Validation Accuracy |
+| ------ | ------------ | ---------------| ------------| ------------------- | -------------- | -----------------|---------------|----------------------|
+| Xception |	0.0956 |	0.9559 |	0.9674	| 0.9659	| 0.2920 | 0.9081 | 0.9357 | 0.9286 |
 
 ## Inference
 
-Our model achieves the following performance on :
-
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
-
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
-
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
-
-
+The prediction **submission file** is present in [PS3 Deep Learning Solution](https://github.com/YashK07/PS3-Solution-by-Yash-Khandelwal/tree/master/PS3%20Deep%20Learning%20%20Solution) directory along with training and inference python notebook. Download the **final trained model** from [here](https://drive.google.com/file/d/1vNPNdv3m436L07kFrmnxQVDnuP7_cU4T/view?usp=share_link). 
 ## References
 
 >📋  Pick a licence and describe how to contribute to your code repository.
