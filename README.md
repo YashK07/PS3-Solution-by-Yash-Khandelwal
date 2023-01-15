@@ -17,7 +17,16 @@ There are 6,252 images in the training data & 2,680 images in test data. The ima
 - Cruise
 - Tankers
 
-![IMG]
+Random Sample of images from each class:
+
+![IMG](https://github.com/YashK07/Sol/blob/master/Readme%20Images/S2.png?raw=true)
+![IMG](https://github.com/YashK07/Sol/blob/master/Readme%20Images/S3.png?raw=true)
+
+
+Image count of each classes in the Training Data:
+
+![IMG](https://github.com/YashK07/Sol/blob/master/Readme%20Images/count1.png?raw=true)
+
 
 ## Modelling
 
