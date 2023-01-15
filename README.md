@@ -1,34 +1,17 @@
->📋  A template README.md for code accompanying a Machine Learning paper
+### L&T EduTech Hackathon Solution - Yash Khandelwal
 
-## L&T EduTech Hackathon Solution - Yash Khandelwal
-
-This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
-
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
-
-## Requirements
-
-To install requirements:
-
-```setup
-pip install -r requirements.txt
-```
-
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
+This repository is my solution for [Problem Statement 3](https://unstop.com/hackathon/lt-edutech-hackathon-at-shaastra-iitm-shaastra-2023-indian-institute-of-technology-iit-madras-579093). 
+![IMG](https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/63b9583cccb14_lt-edutech-hackathon-at-shaastra-iitm.png?d=1920x557)
 
 ## Background
 
-To train the model(s) in the paper, run this command:
+Natural disasters and atmospheric anomalies demand remote monitoring and maintenance of naval objects especially big-size ships. For example, under poor weather conditions, prior knowledge about the ship model 🚢 and type helps the automatic docking system process to be smooth. Hence, a ship or vessel detection system can be devloped  and used in a wide range of applications 📊, in the areas of maritime safety for disaster prevention, fisheries management, marine pollution, defense and maritime security, protection from piracy, illegal migration, etc. In this repository, I showcase the modelling of a Deep Learning model that can be deployed and used in an automated system to identify ship type only from the images taken by the survey boats ✔️
 
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
-```
-
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
-
-## Exploratory Data Analysis
-
-To evaluate my model on ImageNet, run:
+## Data Exploration
+ 
+There are 6,252 images in the training data & 2,680 images in test data.
+[Data Source](https://www.kaggle.com/datasets/arpitjain007/game-of-deep-learning-ship-datasets). The images belong to 5 classes, namely:
+- 
 
 ```eval
 python eval.py --model-file mymodel.pth --benchmark imagenet
