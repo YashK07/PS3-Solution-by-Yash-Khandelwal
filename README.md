@@ -8,16 +8,16 @@ This repository is my solution for [Problem Statement 3](https://unstop.com/hack
 Natural disasters and atmospheric anomalies demand remote monitoring and maintenance of naval objects especially big-size ships. For example, under poor weather conditions, prior knowledge about the ship model 🚢 and type helps the automatic docking system process to be smooth. Hence, a ship or vessel detection system can be devloped  and used in a wide range of applications 📊, in the areas of maritime safety for disaster prevention, fisheries management, marine pollution, defense and maritime security, protection from piracy, illegal migration, etc. In this repository, I showcase the modelling of a Deep Learning model that can be deployed and used in an automated system to identify ship type only from the images taken by the survey boats ✔️
 
 ## Data Exploration
- 
-There are 6,252 images in the training data & 2,680 images in test data.
-[Data Source](https://www.kaggle.com/datasets/arpitjain007/game-of-deep-learning-ship-datasets). The images belong to 5 classes, namely:
-- 
+[Data Source](https://www.kaggle.com/datasets/arpitjain007/game-of-deep-learning-ship-datasets)
 
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
+There are 6,252 images in the training data & 2,680 images in test data. The images belong to 5 classes, namely:
+- Cargo
+- Military 
+- Carrier
+- Cruise
+- Tankers
 
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
+![IMG]
 
 ## Modelling
 
