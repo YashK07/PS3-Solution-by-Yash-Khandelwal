@@ -25,7 +25,7 @@ Random Sample of images from each class:
 
 Image count of each classes in the Training Data:
 
-![IMG](https://github.com/YashK07/Sol/blob/master/Readme%20Images/count1.png?raw=true)
+![IMG](https://github.com/YashK07/Sol/blob/master/Readme%20Images/count.png?raw=true)
 
 
 ## Modelling
