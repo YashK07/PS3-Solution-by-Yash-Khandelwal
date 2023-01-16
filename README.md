@@ -61,11 +61,11 @@ Above models evaluation on **ImageNet** data:
 
 I went on with the following models due to their State-of-the-art performance in image classification.
 
-## Experimental Results
+## Experimental Results on Ship DataSet.
 
 ### Approach 1
 I began with **ResNet50** to obtain a baseline model.
-- Augumentations used = rotation, horizontal flip, width shift, height shift 
+- Augumentations used = rotation, horizontal flip, width shift, height shift + pixel values scaled (0-1)
 - Batch size = 64
 - Learning rate = 1e^-4
 - Optimizer = RMSProp
@@ -94,7 +94,7 @@ Metric Evaluation on Ship Dataset (following are the best results obtained in 30
 Obtained the highest **Kappa Score** on validation data with **Xception**. Moreover, all other metrics and loss values are most optimal in the case of Xception. Hence, I chose Xception as the **baseline**.
 
 After multiple experiments, with the following set of **hyperparamters** I obtained the final model:
-- Augumentations used = rotation, horizontal flip, width shift, height shift, zoom, vertical flip.
+- Augumentations used = rotation, horizontal flip, width shift, height shift, zoom, vertical flip + pixel values scaled (0-1)
 - Batch size = 64
 - Learning rate = 3e^-4
 - Optimizer = Adam
@@ -110,6 +110,5 @@ Results:
 ## Inference
 
 The prediction **submission file** is present in [PS3 Deep Learning Solution](https://github.com/YashK07/PS3-Solution-by-Yash-Khandelwal/tree/master/PS3%20Deep%20Learning%20%20Solution) directory along with training and inference python notebook. Download the **final trained model** from [here](https://drive.google.com/file/d/1vNPNdv3m436L07kFrmnxQVDnuP7_cU4T/view?usp=share_link). 
-## References
 
->📋  Pick a licence and describe how to contribute to your code repository.
+## Conclusion
