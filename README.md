@@ -93,7 +93,7 @@ Metric Evaluation on Ship Dataset (following are the best results obtained in 30
 
 Obtained the highest **Kappa Score** on validation data with **Xception**. Moreover, all other metrics and loss values are most optimal in the case of Xception. Hence, I chose Xception as the **baseline**.
 
-After multiple experiments, with the following set of **hyperparamters** I obtained the final model:
+After multiple experiments, with the following set of **hyperparamters** on Xception I obtained the final model:
 - Augumentations used = rotation, horizontal flip, width shift, height shift, zoom, vertical flip + pixel values scaled (0-1)
 - Batch size = 64
 - Learning rate = 3e^-4
