@@ -40,9 +40,9 @@ I have used two appraoches for devlopeing models and obtaining the most optimal 
 
 In the approach 1, the head has a **Flatten layer** followed by a hidden layer with **512 neurons** & then a predicition layer with 5 neurons (5 classes).
 
-In the appraoch 2, I have used GlobalPooling instead of **Flatten** + **Hidden layers** in the head. Here are a few reasons:
+In the appraoch 2, I have used **GlobalPooling** instead of **Flatten** + **Hidden layers** in the head. Here are a few reasons:
 
-- **Global Pooling** condenses all of the feature maps into a single one, pooling all of the relevant information into a single map that can be easily understood by a single dense classification layer instead of multiple layers.
+- Global Pooling condenses all of the feature maps into a single one, pooling all of the relevant information into a single map that can be easily understood by a single dense classification layer instead of multiple layers.
 - It's typically applied as average pooling (GlobalAveragePooling2D) or max pooling (GlobalMaxPooling2D) and can work for 1D and 3D input as well.
 - Note that bottleneck layers for networks like ResNets count in tens of thousands of features, not a mere 1536. When flattening, you're torturing your network to learn from oddly-shaped vectors in a very inefficient manner.
 
