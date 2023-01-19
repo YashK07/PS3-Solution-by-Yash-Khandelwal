@@ -109,7 +109,11 @@ Results:
 
 ## Inference
 
-The prediction **submission file** is present in [PS3 Deep Learning Solution](https://github.com/YashK07/PS3-Solution-by-Yash-Khandelwal/tree/master/PS3%20Deep%20Learning%20%20Solution) directory along with training and inference python notebook. Download the **final trained model** from [here](https://drive.google.com/file/d/1vNPNdv3m436L07kFrmnxQVDnuP7_cU4T/view?usp=share_link). 
+The prediction **submission file** is present in [PS3 Deep Learning Solution](https://github.com/YashK07/PS3-Solution-by-Yash-Khandelwal/tree/master/PS3%20Deep%20Learning%20%20Solution) directory along with training and inference python notebook. 
+
+### Trained Final Model Link
+
+Download the **final trained model** from [here](https://drive.google.com/file/d/1vNPNdv3m436L07kFrmnxQVDnuP7_cU4T/view?usp=share_link).
 
 ## Conclusion
 **Xception** gives the best predictive performance based on **Cohen's kappa** metric. Hence, the trained model can be deployed in automated systems for the purpose of ship type identification.
