@@ -102,7 +102,7 @@ After multiple experiments, with the following set of **hyperparamters** on Xcep
 - Metric = Cohen Kappa, F1 Score, Categorical Accuracy
 - Epochs = 50
 
-### Results (Train: 85%, Validation: 15% of Training dataset):
+### Results (Primary Metric = Cohen's kappa; Train: 85%, Validation: 15% of Training dataset):
 | Model	| Training Loss |	Training Kappa | Training F1 |	Training Accuracy | Validation Loss |	Validation Kappa | Validation F1 |	Validation Accuracy |
 | ------ | ------------ | ---------------| ------------| ------------------- | -------------- | -----------------|---------------|----------------------|
 | Xception |	0.0956 |	0.9559 |	0.9674	| 0.9659	| 0.2920 | 0.9081 | 0.9357 | 0.9286 |
